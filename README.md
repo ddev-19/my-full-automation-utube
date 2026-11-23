@@ -16,10 +16,10 @@ Manual run any time: **Actions → Daily episode → Run workflow** (you can pic
 
 ## One-time setup (≈ 1–1.5 h)
 
-### 1. Claude API key
-- https://console.anthropic.com → API keys → Create key.
-- Billing → set a **monthly spend limit**.
-- GitHub repo → Settings → Secrets and variables → Actions → **New repository secret**: `ANTHROPIC_API_KEY`.
+### 1. Claude (your subscription — no API key needed)
+- Install Claude Code on your computer (`npm install -g @anthropic-ai/claude-code`), then run `claude setup-token` and sign in with your Claude account. It prints a long-lived token (`sk-ant-oat01-…`).
+- GitHub repo → Settings → Secrets and variables → Actions → **New repository secret**: name `CLAUDE_CODE_OAUTH_TOKEN`, value = that token.
+- Daily runs use your plan's usage limits. If you'd rather pay per use, create an API key at console.anthropic.com, save it as `ANTHROPIC_API_KEY`, and change `claude_code_oauth_token` back to `anthropic_api_key` in the workflow.
 
 ### 2. Gemini API key (voice)
 - https://aistudio.google.com → **Get API key** → Create API key.
