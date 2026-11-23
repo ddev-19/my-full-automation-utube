@@ -128,7 +128,12 @@ jobs:
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
           YT_PLAYLIST_ID: ${{ vars.YT_PLAYLIST_ID }}
           YT_SYNTHETIC: ${{ vars.YT_SYNTHETIC || 'false' }}
-        run: python3 pipeline/upload.py
+        run: |
+          if [ -z "$YT_REFRESH_TOKEN" ] || [ -z "$YT_CLIENT_ID" ] || [ -z "$YT_CLIENT_SECRET" ]; then
+            echo "::notice::YouTube secrets not set yet — skipping upload. Download the video from this run's artifacts."
+            exit 0
+          fi
+          python3 pipeline/upload.py
 
       - name: Save episode + mark festival done
         run: |
