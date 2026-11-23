@@ -1,0 +1,154 @@
+name: Daily episode
+
+on:
+  schedule:
+    - cron: "30 0 * * *"   # every day 06:00 IST (00:30 UTC)
+  workflow_dispatch:
+    inputs:
+      festival_id:
+        description: "Festival id from festivals.csv (leave blank = next pending)"
+        required: false
+        default: ""
+      upload:
+        description: "Upload to YouTube"
+        type: boolean
+        default: true
+
+concurrency:
+  group: daily-episode
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+  id-token: write
+
+jobs:
+  episode:
+    runs-on: ubuntu-latest
+    timeout-minutes: 200
+    env:
+      TTS_VOICE: ${{ vars.TTS_VOICE || 'Charon' }}
+      TTS_MODEL: ${{ vars.TTS_MODEL }}
+      CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL || 'claude-sonnet-5-5' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: video/package-lock.json
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: pipeline/requirements.txt
+
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg imagemagick
+          pip install -q -r pipeline/requirements.txt
+          cd video && npm ci --no-audit --no-fund && node gen-sfx.mjs && npx remotion browser ensure
+
+      - name: Pick festival
+        id: pick
+        run: |
+          if [ -n "${{ inputs.festival_id }}" ]; then python3 pipeline/next_festival.py --id "${{ inputs.festival_id }}"; else python3 pipeline/next_festival.py; fi
+
+      - name: "Claude: research + script"
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          prompt: "Follow the instructions in prompts/step_script.md exactly."
+          claude_args: >-
+            --model ${{ env.CLAUDE_MODEL }}
+            --max-turns 60
+            --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch,Bash(python3:*),Bash(wc:*),Bash(cat:*),Bash(ls:*)"
+
+      - name: Check script outputs
+        run: |
+          test -s work/voiceover.txt && test -s work/meta.json && test -s work/script.md
+          python3 -c "import json;m=json.load(open('work/meta.json'));print(m['title'])"
+          wc -w work/voiceover.txt
+
+      - name: Voice (Gemini TTS) + timing
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python3 pipeline/tts.py
+          ffmpeg -y -v error -i work/voice.wav -af "atrim=start=0,asetpts=PTS-STARTPTS" -ar 44100 -ac 1 -c:a libmp3lame -b:a 192k video/public/voice.mp3
+          python3 video/tools/make_rms.py video/public/voice.mp3 video/src/rms.json
+          python3 pipeline/align.py work/voiceover.txt video/public/voice.mp3 work/caps.json work/captions.srt
+          python3 pipeline/make_data.py
+
+      - name: "Claude: animate scenes + thumbnail"
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          prompt: "Follow the instructions in prompts/step_video.md exactly."
+          claude_args: >-
+            --model ${{ env.CLAUDE_MODEL }}
+            --max-turns 120
+            --allowedTools "Read,Write,Edit,Glob,Grep,Bash(cd:*),Bash(npx:*),Bash(node:*),Bash(python3:*),Bash(montage:*),Bash(ls:*),Bash(rm:*),Bash(mkdir:*),Bash(cat:*)"
+
+      - name: Render video + thumbnail
+        working-directory: video
+        run: |
+          npx tsc --noEmit
+          npx remotion render src/index.ts StoryVideo out/raw.mp4 --codec h264 --crf 20 --overwrite
+          npx remotion still src/index.ts Thumbnail out/thumb.png --overwrite
+          mkdir -p ../out
+          ffmpeg -y -v error -i out/raw.mp4 -c:v libx264 -preset veryfast -crf 23 -pix_fmt yuv420p -af loudnorm=I=-16:TP=-1.5:LRA=11 -c:a aac -b:a 160k -ar 48000 -movflags +faststart ../out/video.mp4
+          cp out/thumb.png ../out/thumb.png
+          ffprobe -v error -show_entries format=duration,size -of compact ../out/video.mp4
+
+      - name: Keep files as run artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: episode-${{ steps.pick.outputs.slug }}
+          path: |
+            out/video.mp4
+            out/thumb.png
+            work/script.md
+            work/voiceover.txt
+            work/captions.srt
+            work/meta.json
+          retention-days: 14
+
+      - name: Upload to YouTube (private)
+        if: ${{ github.event_name == 'schedule' || inputs.upload }}
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          YT_PLAYLIST_ID: ${{ vars.YT_PLAYLIST_ID }}
+          YT_SYNTHETIC: ${{ vars.YT_SYNTHETIC || 'false' }}
+        run: python3 pipeline/upload.py
+
+      - name: Save episode + mark festival done
+        run: |
+          python3 pipeline/mark_done.py
+          git config user.name "pauranik-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add festivals.csv episodes/
+          git commit -m "Episode ${{ steps.pick.outputs.slug }}" || echo "nothing to commit"
+          git push
+
+      - name: Review note (GitHub issue)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 pipeline/report.py "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          gh issue create --title "Review: ${{ steps.pick.outputs.festival }}" --body-file work/issue.md
+
+      - name: Tell me if it failed
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create --title "Pipeline failed: ${{ steps.pick.outputs.festival || 'run' }}" --body "See ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

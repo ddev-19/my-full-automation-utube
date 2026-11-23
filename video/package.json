@@ -1,0 +1,25 @@
+{
+  "name": "pauranik-kathaye-video",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fontsource/hind": "^5.3.0",
+    "@fontsource/noto-serif-devanagari": "^5.3.0",
+    "@remotion/cli": "4.0.545",
+    "@types/react": "^19.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "remotion": "4.0.545",
+    "typescript": "^7.0.2",
+    "@remotion/bundler": "4.0.545",
+    "@remotion/renderer": "4.0.545"
+  },
+  "private": true
+}

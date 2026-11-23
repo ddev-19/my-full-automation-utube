@@ -1,0 +1,13 @@
+node_modules/
+video/out/
+video/public/voice.mp3
+video/public/sfx/
+video/src/rms.json
+work/
+out/
+*.mp4
+*.wav
+client_secret*.json
+token*.json
+.env
+__pycache__/
