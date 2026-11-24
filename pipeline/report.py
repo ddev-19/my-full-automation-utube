@@ -15,7 +15,7 @@ lines = [f"# {fest['id']:02d} · {fest['festival']} ({fest['hindi']})", '']
 if up.get('video_id'):
     lines += [f"**Video (private):** {up['url']}", f"**Edit / publish in Studio:** {up['studio']}", '']
 else:
-    lines += ['**Not uploaded** — download the video from the workflow run artifacts.', '']
+    lines += ['**Not uploaded** — download the video from the repo’s Releases page (fast) or the workflow run artifacts.', '']
 lines += [f"**Title:** {meta.get('title', '')}", '', '## Your review checklist (≈15 min)',
           '- [ ] Watch the video once (voice, pronunciation of Sanskrit lines, scene timing)',
           '- [ ] Read the fact-check table below; fix the description in Studio if needed',

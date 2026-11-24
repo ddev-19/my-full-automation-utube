@@ -122,6 +122,16 @@ jobs:
             work/meta.json
           retention-days: 14
 
+      - name: Fast download link (GitHub Release)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="ep-${{ steps.pick.outputs.slug }}-${{ github.run_number }}"
+          gh release create "$TAG" out/video.mp4 out/thumb.png work/meta.json work/captions.srt \
+            --title "${{ steps.pick.outputs.festival }}" \
+            --notes "Video, thumbnail, title/description (meta.json) and captions for review." \
+            --prerelease || echo "::warning::release creation failed"
+
       - name: Upload to YouTube (private)
         if: ${{ github.event_name == 'schedule' || inputs.upload }}
         env:
