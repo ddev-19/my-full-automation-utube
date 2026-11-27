@@ -1,0 +1,104 @@
+# Video 08 — महाशिवरात्रि (Maha Shivratri)
+
+**Festival date:** Saturday, 6 March 2027 (Krishna Chaturdashi; main Nishita puja after midnight, early 7 March; Delhi Nishita ≈ 12:07–12:57 AM per Drik Panchang) · **Next video:** Holi
+
+## 1. Titles, thumbnail, description
+1. ब्रह्मा और विष्णु के बीच आग का खंभा क्यों उठा? | महाशिवरात्रि की पूरी कथा  ← chosen
+2. महाशिवरात्रि 2027: कथा, तिथि और परंपराएँ
+3. शिवलिंग पहली बार कैसे प्रकट हुआ? लिंगोद्भव की कथा
+
+**Thumbnail:** "महाशिवरात्रि" + "आग का अनंत खंभा" (night bg, MUNI).
+
+**Description:** see meta.json. Chapters: placeholder, fill after voice timing.
+
+**Tags:** see meta.json.
+
+## 2. Script (voice-over)
+8
+### हुक: आग का खंभा
+**[दृश्य / SCENE: Dark night; a pillar of fire rises between Brahma and Vishnu.]**
+
+अँधेरी रात थी। ऐसा अँधेरा, जिसमें हाथ को हाथ नहीं सूझता। … और तभी ब्रह्मा और विष्णु के बीच आग का एक खंभा खड़ा हो गया।
+इतना ऊँचा कि न उसका ऊपर का सिरा दिखता था, न नीचे का। … दोनों बड़े देवता चुप हो गए। उनकी बहस उस रोशनी में ठंडी पड़ गई।
+यही है शिवलिंग के प्रकट होने की कथा। … और जिस रात इसे याद किया जाता है, उसे हम कहते हैं — महाशिवरात्रि।
+
+### शिवरात्रि क्या है
+**[दृश्य / SCENE: Moon-phase chaturdashi, calendar months Phalguna/Magha, date 6 March.]**
+
+शिवरात्रि का मतलब है, शिव की रात। … हर महीने कृष्ण पक्ष की चतुर्दशी को मासिक शिवरात्रि आती है। पर साल की एक रात सबसे बड़ी मानी जाती है, इसीलिए उसके आगे "महा" लगता है।
+उत्तर भारत के पंचांग में यह फाल्गुन का महीना होता है, और दक्षिण और पश्चिम भारत के पंचांग में माघ। … नाम अलग हैं, रात वही है।
+शिव को महादेव कहते हैं, यानी देवों के भी देव। … राख लगाए, जटाओं में गंगा, गले में साँप, और हाथ में डमरू। सबसे साधारण दिखने वाले, पर सबसे गहरे देवता।
+इस साल महाशिवरात्रि शनिवार, छह मार्च, दो हज़ार सत्ताईस को है। मुख्य पूजा आधी रात के बाद, सात मार्च की शुरुआत में होती है।
+
+### लिंगोद्भव की कथा
+**[दृश्य / SCENE: Swan Brahma flies up, boar Vishnu digs down, Ketaki flower falls; pillar splits, Shiva appears.]**
+
+पहले उस खंभे की कथा सुनिए। … यह कथा बताती है कि शिव कोई एक रूप में बँधे नहीं हैं। शिव पुराण और लिंग पुराण में यह कथा मिलती है।
+एक बार ब्रह्मा और विष्णु में बहस छिड़ गई। … ब्रह्मा बोले, "मैं सृष्टि बनाता हूँ, इसलिए मैं बड़ा हूँ।" विष्णु बोले, "मैं सृष्टि को सँभालता हूँ, बड़ा मैं हूँ।"
+तभी उनके बीच आग का वह अनंत खंभा प्रकट हुआ। … आवाज़ आई, "जो इसका छोर ढूँढ लाएगा, वही बड़ा कहलाएगा।"
+ब्रह्मा हंस बनकर ऊपर की ओर उड़े। विष्णु वराह बनकर नीचे, धरती खोदते हुए चले। … बहुत समय बीत गया। न ऊपर का अंत मिला, न नीचे का।
+विष्णु थक गए। उन्होंने सच मान लिया, "मुझे इसका अंत नहीं मिला।" …
+उधर ब्रह्मा को ऊपर से गिरता हुआ एक केतकी का फूल मिला। उन्होंने सोचा, इसी को गवाह बना लेता हूँ। … वे लौटे और बोले, "मैंने सिरा देख लिया, यह फूल गवाह है।"
+तभी खंभा फटा, और उसमें से शिव प्रकट हुए। … विष्णु ने हाथ जोड़कर अपनी हार मानी, तो शिव प्रसन्न हुए। ब्रह्मा के झूठ पर वे नाराज़ हुए।
+शिव पुराण के अनुसार, यह घटना माघ महीने के कृष्ण पक्ष की चतुर्दशी की रात हुई थी। … उस रूप को कहते हैं, लिंगोद्भव, यानी लिंग से प्रकट होने वाले शिव।
+
+### शिव-पार्वती विवाह
+**[दृश्य / SCENE: Parvati doing tapasya; Kamadeva; baraat with Nandi and ganas; Maina startled.]**
+
+अब दूसरी कथा। … माना जाता है कि यह रात शिव और पार्वती के विवाह की भी रात है।
+सती के जाने के बाद शिव गहरे ध्यान में चले गए। … सती ने पार्वती बनकर हिमालय के घर जन्म लिया। पार्वती ने शिव को पाने के लिए बरसों कठोर तपस्या की।
+कहते हैं, देवताओं ने कामदेव को भेजा, ताकि शिव का ध्यान टूटे। … पर शिव ने आँख खोली, और कामदेव राख हो गए। तब पार्वती ने और भी कठिन तप किया, बिना अन्न-जल के, बस प्रेम और धैर्य के साथ।
+आखिर शिव मान गए। … बारात निकली। दूल्हे के साथ नंदी, गण, भूत-प्रेत, और गले में साँप। … पार्वती की माँ मैना यह देखकर घबरा गईं।
+फिर शिव ने अपना सुंदर रूप दिखाया, और विवाह पूरा हुआ। … इस कथा का आधार शिव पुराण का रुद्र संहिता भाग है।
+
+### बेल पत्र वाला शिकारी
+**[दृश्य / SCENE: Hunter on a bel tree dropping leaves on a lingam.]**
+
+एक कथा शिकारी की भी है। … शिव पुराण में आता है कि एक भूखा शिकारी रात भर एक बेल के पेड़ पर बैठा रहा। नीचे शिवलिंग था। वह नींद भगाने के लिए पत्ते तोड़-तोड़कर गिराता रहा।
+सुबह तक उसकी भूख-प्यास में बीती वह रात, शिव की पूजा बन चुकी थी। बिना जाने ही रात भर जागना हो गया, और बेल के पत्ते शिवलिंग पर चढ़ गए। … माना जाता है कि इसी भाव से शिव ने उसे अपना लिया। इसीलिए आज भी बेल पत्र चढ़ाया जाता है।
+
+### कथा के दो रूप
+**[दृश्य / SCENE: Two versions: reasons for the night, Ketaki vs Brahma.]**
+
+कथा के दो रूप भी हैं। … पहला, इस रात का कारण। कुछ लोग इसे अग्नि-स्तंभ की रात मानते हैं, कुछ विवाह की रात। कुछ परंपराओं में इसे समुद्र मंथन के विष की कथा से भी जोड़ा जाता है, जब शिव ने हलाहल पी लिया था। … हर परंपरा की अपनी मान्यता है।
+दूसरा, केतकी के फूल का मामला। … कई कथाओं में शिव ने झूठे गवाह केतकी को अपनी पूजा से बाहर कर दिया। पर कुछ रूपों में सज़ा ब्रह्मा को मिलती है, कि उनकी पूजा अलग से नहीं होगी। … इसलिए आपके घर की कथा थोड़ी अलग हो सकती है।
+
+### आज कैसे मनाते हैं
+**[दृश्य / SCENE: Temples, queues, jagran, Kashmir Herath walnuts.]**
+
+अब आज की बात। … महाशिवरात्रि पर लोग व्रत रखते हैं, शिवलिंग पर जल, दूध और बेल पत्र चढ़ाते हैं, और रात भर जागते हैं। कई जगह रात के चार पहरों में चार बार पूजा होती है।
+उज्जैन के महाकाल मंदिर में बड़ा मेला लगता है। वाराणसी में काशी विश्वनाथ की ओर भक्तों की कतारें लगती हैं। … और तमिलनाडु के कई शिव मंदिरों में गर्भगृह की पिछली दीवार पर लिंगोद्भव की मूर्ति बनी होती है, जो इसी खंभे की कथा याद दिलाती है।
+इन जगहों पर लोग सुबह से कतार में खड़े होते हैं, और मंदिरों में रात भर ॐ नमः शिवाय की आवाज़ गूँजती है। घरों में भी लोग फल खाकर व्रत रखते हैं, और परिवार के साथ बैठकर कथा सुनते हैं।
+एक अनोखी परंपरा कश्मीर की है। … वहाँ कश्मीरी पंडित इसे "हेरथ" कहते हैं, और कई दिन तक मनाते हैं। पूजा में अखरोट का खास स्थान होता है।
+यह भी याद रखिए कि यह त्योहार किसी दिखावे का नहीं है। … एक लोटा जल और एक बेल पत्र, जो मन से चढ़ाया जाए, वही काफ़ी माना जाता है।
+यह रात सिखाती है कि बड़ा वही है, जो अहंकार छोड़ना जानता है। …
+
+### अगली कहानी: होली
+**[दृश्य / SCENE: Prahlad in fire, Krishna and Radha with colours.]**
+
+अगली कहानी रंगों की है। … एक बच्चा था, जिसे आग में बिठाया गया, पर आँच उसे छू भी नहीं पाई। … और दूर ब्रज में कृष्ण अपनी राधा को रंग लगाने की ज़िद कर रहे थे। प्रह्लाद और होलिका की वह कहानी, होली पर, अगले वीडियो में।
+आपके घर में महाशिवरात्रि की कौन सी कथा सुनाई जाती है? कमेंट में ज़रूर लिखिए। … हर हर महादेव।
+
+
+## 3. Shorts cut (≈45 sec)
+Paragraph "लिंगोद्भव की कथा" (ब्रह्मा हंस, विष्णु वराह). New opening: "ब्रह्मा ऊपर उड़े, विष्णु नीचे गए — और दोनों खंभे का अंत नहीं ढूँढ पाए।"
+
+## 4. Fact-check table
+| # | Claim | Source | Confidence |
+|---|---|---|---|
+| 1 | Maha Shivratri 2027 = Sat 6 Mar; main puja after midnight into 7 Mar (festival.json "Feb 17" is wrong) | Drik Panchang, Dekho Panchang, other panchang sites | High (India); timings vary by city |
+| 2 | Monthly Shivratri on Krishna Chaturdashi; Phalguna (purnimanta) = Magha (amanta), same night | Britannica / Drik Panchang | High |
+| 3 | Brahma–Vishnu dispute, fiery pillar, swan and boar, Vishnu admits, Brahma lies with Ketaki | Shiva Purana (Vidyeshwara Samhita), Linga Purana | High (core plot) |
+| 4 | Event placed on Magha Krishna Chaturdashi night | Shiva Purana | Verify wording |
+| 5 | Ketaki barred from Shiva worship vs. Brahma not worshipped separately | Versions differ across Puranas | Two versions, presented neutrally |
+| 6 | Shiva–Parvati marriage; Sati reborn; baraat with ganas; Maina alarmed; Kamadeva burnt | Shiva Purana, Rudra Samhita (Parvati Khanda) | High (story); Shivratri = wedding night is Belief |
+| 7 | Hunter on bel tree, unknowingly worships | Shiva Purana (Koti Rudra Samhita) | Folk/Purana tale; script says "माना जाता है" |
+| 8 | Some traditions link the night to Halahala drinking | Popular tradition | Belief |
+| 9 | Four-prahar worship, fasting, jal/milk/bel patra, jagran | Common practice | High |
+| 10 | Mahakal Ujjain mela; Kashi Vishwanath crowds | Widely reported | High |
+| 11 | Lingodbhava image on rear wall of garbhagriha in many Tamil Shiva temples | Temple iconography convention | High |
+| 12 | Kashmiri Pandits call it Herath, multi-day, walnuts | Kashmiri Pandit tradition | High |
+| 13 | Holi teaser: Prahlad/Holika, Krishna–Radha colours | Bhagavata Purana / Braj tradition | High |
+
+## 5. Voice notes
+Check: लिंगोद्भव, केतकी, हलाहल, हेरथ, "ॐ नमः शिवाय".
